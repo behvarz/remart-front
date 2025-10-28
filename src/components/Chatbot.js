@@ -79,6 +79,13 @@ const Chatbot = ({ artworkContext = null }) => {
     }, 0);
 
     try {
+      console.log('🐛 CHATBOT DEBUG:', {
+        API_URL,
+        REQUEST_URL: `${API_URL}/api/chat`,
+        MESSAGE: inputMessage,
+        SESSION_ID: sessionId
+      });
+      
       const response = await axios.post(`${API_URL}/api/chat`, {
         message: inputMessage,
         sessionId: sessionId,
@@ -100,10 +107,28 @@ const Chatbot = ({ artworkContext = null }) => {
         window.scrollTo(0, currentScrollY);
       }, 0);
     } catch (error) {
-      console.error('Chat error:', error);
+      console.error('🚨 CHAT ERROR:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        url: error.config?.url,
+        API_URL
+      });
+      
+      let errorText = '❌ Bağlantı hatası: ';
+      if (error.response?.status === 404) {
+        errorText += 'API endpoint bulunamadı. Backend URL kontrol edin.';
+      } else if (error.response?.status >= 500) {
+        errorText += 'Sunucu hatası. Backend loglarını kontrol edin.';
+      } else if (error.code === 'NETWORK_ERROR') {
+        errorText += 'Network hatası. CORS veya bağlantı sorunu olabilir.';
+      } else {
+        errorText += `${error.message}. Console'da detaylı bilgi var.`;
+      }
+      
       const errorMessage = {
         id: Date.now() + 1,
-        text: '❌ Bağlantı hatası. Backend sunucusunun çalıştığından emin olun.',
+        text: errorText,
         sender: 'bot',
         timestamp: new Date()
       };

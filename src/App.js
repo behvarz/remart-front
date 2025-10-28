@@ -19,6 +19,14 @@ import './App.css';
 
 function App() {
   useEffect(() => {
+    // Debug: Log environment info to console
+    console.log('🐛 REMART DEBUG INFO:', {
+      API_URL: process.env.REACT_APP_API_URL,
+      NODE_ENV: process.env.NODE_ENV,
+      ALL_ENV_VARS: Object.keys(process.env).filter(key => key.startsWith('REACT_APP_')),
+      CURRENT_URL: window.location.href
+    });
+    
     // Set background image dynamically
     document.documentElement.style.backgroundImage = "url('/bg.jpg')";
     document.documentElement.style.backgroundSize = "cover";
