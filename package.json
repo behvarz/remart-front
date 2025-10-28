@@ -1,11 +1,11 @@
 {
   "name": "remart-frontend",
   "version": "1.0.0",
-  "description": "Remart - İrem Eyüpoğlu Sanat Portalı React Frontend",
+  "description": "Remart - İrem Köse Sanat Portalı React Frontend",
   "private": true,
 
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
 
   "dependencies": {
