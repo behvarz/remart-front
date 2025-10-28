@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import './EventsPage.css';
@@ -29,7 +29,7 @@ const EventsPage = () => {
     };
   }, []);
 
-  const events = [
+  const events = useMemo(() => [
     {
       id: 1,
       title: "Renklerin Sesi - Kişisel Sergi",
@@ -108,7 +108,7 @@ const EventsPage = () => {
       capacity: "12 kişi",
       status: "upcoming"
     }
-  ];
+  ], []);
 
   useEffect(() => {
     if (selectedCategory === 'all') {
@@ -116,7 +116,7 @@ const EventsPage = () => {
     } else {
       setFilteredEvents(events.filter(event => event.category === selectedCategory));
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, events]);
 
   const categories = [
     { id: 'all', name: 'Tümü', count: events.length },
@@ -125,14 +125,6 @@ const EventsPage = () => {
     { id: 'event', name: 'Etkinlik', count: events.filter(e => e.category === 'event').length }
   ];
 
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'workshop': return '●';
-      case 'sergi': return '●';
-      case 'event': return '●';
-      default: return '●';
-    }
-  };
 
   return (
     <div className="events-page">
