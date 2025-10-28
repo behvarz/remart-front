@@ -336,45 +336,119 @@
 @media (max-width: 768px) {
   .artwork-detail-page {
     padding: 100px 15px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-detail-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .artwork-info-section {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .artwork-title {
     font-size: 2rem;
+    text-align: center;
+    width: 100%;
   }
   
   .artwork-specs {
     padding: 20px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .spec-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 5px;
+    text-align: center;
+  }
+  
+  .spec-label {
+    text-align: center;
+    width: 100%;
   }
   
   .spec-value {
     max-width: 100%;
-    text-align: left;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description,
+  .artwork-story {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .artwork-description h3,
+  .artwork-story h3 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description p,
+  .artwork-story p {
+    text-align: center;
+    width: 100%;
   }
   
   .artwork-actions {
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    align-items: center;
   }
   
   .chatbot-button,
   .whatsapp-button {
     flex: none;
     width: 100%;
+    max-width: 300px;
+  }
+  
+  .other-artworks {
+    width: 100%;
+    text-align: center;
   }
   
   .other-artworks h2 {
     font-size: 2rem;
+    text-align: center;
   }
   
   .other-artworks-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
+    width: 100%;
   }
   
   .other-artwork-image {
@@ -389,47 +463,110 @@
   .chatbot-container {
     height: 350px;
   }
+  
+  #chatbot-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-header {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .other-artworks-header h2 {
+    text-align: center;
+  }
+  
+  .other-artworks-header p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .artwork-detail-page {
     padding: 80px 10px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-detail-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .artwork-title {
     font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
   }
   
   .artwork-specs {
     padding: 15px;
+    width: 100%;
+    text-align: center;
   }
   
   .artwork-description h3,
   .artwork-story h3 {
     font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
   }
   
   .artwork-description p,
   .artwork-story p {
     font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-actions {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .chatbot-button,
+  .whatsapp-button {
+    width: 100%;
+    max-width: 250px;
   }
   
   .other-artworks-section {
     margin-top: 60px;
     padding: 0 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-header {
+    text-align: center;
+    width: 100%;
   }
   
   .other-artworks-header h2 {
     font-size: 2rem;
+    text-align: center;
   }
   
   .other-artworks-header p {
     font-size: 1rem;
+    text-align: center;
   }
   
   .other-artworks-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    width: 100%;
   }
   
   .other-artwork-image-container {
@@ -438,13 +575,16 @@
   
   .other-artwork-info {
     padding: 15px;
+    text-align: center;
   }
   
   .other-artwork-info h4 {
     font-size: 1.1rem;
+    text-align: center;
   }
   
   .other-artwork-info p {
     font-size: 0.85rem;
+    text-align: center;
   }
 }

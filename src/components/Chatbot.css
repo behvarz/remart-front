@@ -167,10 +167,14 @@
   font-weight: 500;
   color: #25D366;
   text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: inline;
 }
 
 .whatsapp-link:hover {
   text-decoration: underline;
+  color: #128C7E;
 }
 
 .message.bot .message-content {

@@ -13,7 +13,7 @@
 }
 
 .blog-header h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 300;
   margin-bottom: 20px;
   color: #2c2c2c;
@@ -109,10 +109,10 @@
 }
 
 .post-title {
-  font-size: 1.5rem;
+  font-size: 1.125rem !important;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #2c2c2c;
+  color: #2c2c2c !important;
   line-height: 1.4;
 }
 
@@ -150,71 +150,85 @@
   transform: scale(1.05);
 }
 
-.blog-newsletter {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* ===== AUTO GALLERY ===== */
+.gallery-section {
+  margin: 100px 0;
+  overflow: hidden;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.blog-newsletter h3 {
+.gallery-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-title h2 {
+  font-family: var(--font-clash-display);
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 15px;
-  color: #2c2c2c;
+  color: #111;
+  margin-bottom: 8px;
 }
 
-.blog-newsletter p {
-  font-size: 1.1rem;
+.gallery-title p {
+  font-size: 0.95rem;
   color: #666;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  font-weight: 300;
 }
 
-.newsletter-form {
+.gallery-track {
   display: flex;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 30px;
+  animation: scroll 30s linear infinite;
+  width: max-content;
 }
 
-.newsletter-input {
-  flex: 1;
-  min-width: 200px;
-  padding: 12px 20px;
-  border: 2px solid #e5e5e5;
-  border-radius: 25px;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
+.gallery-track:hover {
+  animation-play-state: paused;
 }
 
-.newsletter-input:focus {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-.newsletter-btn {
-  background: #dc2626;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
+.gallery-item {
+  flex-shrink: 0;
+  width: 320px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
 }
 
-.newsletter-btn:hover {
-  background: #b91c1c;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+.gallery-item:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: all 0.4s ease;
+}
+
+.gallery-item:hover img {
+  filter: brightness(1.05);
 }
 
 /* Responsive Design */
@@ -224,7 +238,7 @@
   }
 
   .blog-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .blog-header p {
@@ -246,34 +260,28 @@
   }
 
   .post-title {
-    font-size: 1.3rem;
+    font-size: 1.125rem !important;
+    color: #2c2c2c !important;
   }
 
   .post-excerpt {
     font-size: 0.9rem;
   }
 
-  .blog-newsletter {
-    padding: 30px 20px;
+  .gallery-item {
+    width: 260px;
+    height: 340px;
+  }
+  
+  /* Mobilde title'ı gizle */
+  .desktop-title {
+    display: none;
   }
 
-  .blog-newsletter h3 {
-    font-size: 1.5rem;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .newsletter-input {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .newsletter-btn {
-    width: 100%;
-    max-width: 200px;
+  /* Mobilde margin ve padding'i azalt */
+  .gallery-section {
+    margin: 20px 0; /* 100px'den 20px'e düşürüldü */
+    padding: 20px 0; /* 40px'den 20px'e düşürüldü */
   }
 }
 
@@ -283,7 +291,7 @@
   }
 
   .blog-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .post-image {
@@ -295,15 +303,12 @@
   }
 
   .post-title {
-    font-size: 1.2rem;
+    font-size: 1.125rem !important;
+    color: #2c2c2c !important;
   }
 
-  .blog-newsletter {
-    padding: 25px 15px;
-  }
-
-  .blog-newsletter h3 {
-    font-size: 1.3rem;
-  }
 }
+
+
+
 

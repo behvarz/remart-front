@@ -129,8 +129,8 @@ const Chatbot = ({ artworkContext = null }) => {
       return `<strong>${match}</strong>`;
     });
     
-    // WhatsApp numarasını özel stil yap
-    formattedText = formattedText.replace(/(\+90 555 835 19 40)/g, '<span class="whatsapp-link">$1</span>');
+    // WhatsApp numarasını link olarak yap
+    formattedText = formattedText.replace(/(\+90 555 835 19 40)/g, '<a href="https://wa.me/905558351940" target="_blank" class="whatsapp-link">$1</a>');
     
     // Satır sonlarını koru
     formattedText = formattedText.replace(/\n/g, '<br>');

@@ -1,5 +1,4 @@
 {
-  "name": "remart-frontend",
   "version": 2,
   "builds": [
     {
@@ -37,7 +36,8 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@react_app_api_url"
+    "REACT_APP_API_URL": "https://remart-backend.onrender.com"
   }
 }
+
 

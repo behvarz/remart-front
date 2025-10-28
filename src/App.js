@@ -1,5 +1,3 @@
-console.log("✅ API URL:", process.env.REACT_APP_API_URL);
-
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -13,6 +11,8 @@ import ArtistPage from './components/ArtistPage';
 import ContactPage from './components/ContactPage';
 import BlogPage from './components/BlogPage';
 import BlogDetail from './components/BlogDetail';
+import EventsPage from './components/EventsPage';
+import EventDetail from './components/EventDetail';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
@@ -73,6 +73,8 @@ function App() {
             <Route path="/sanatci" element={<ArtistPage />} />
             <Route path="/eserler" element={<ArtworksPage />} />
             <Route path="/eser/:id" element={<ArtworkDetail />} />
+            <Route path="/etkinlikler" element={<EventsPage />} />
+            <Route path="/etkinlik/:id" element={<EventDetail />} />
             <Route path="/iletisim" element={<ContactPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogDetail />} />

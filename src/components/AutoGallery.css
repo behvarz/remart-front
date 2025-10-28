@@ -85,9 +85,9 @@
     height: 340px;
   }
   
-  /* Mobilde title'ı gizle */
-  .desktop-title {
-    display: none;
+  /* Mobilde title'ı tamamen gizle */
+  .gallery-title {
+    display: none !important;
   }
 
   /* Mobilde margin ve padding'i azalt */

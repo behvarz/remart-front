@@ -7,6 +7,7 @@ import './ArtworksPage.css';
 const ArtworksPage = () => {
   const navigate = useNavigate();
   const [selectedArtwork, setSelectedArtwork] = useState(null);
+  const [modalArtwork, setModalArtwork] = useState(null);
 
   useEffect(() => {
     // Set background image
@@ -228,6 +229,8 @@ const ArtworksPage = () => {
                 src={artwork.image} 
                 alt={artwork.name}
                 className="artwork-image"
+                onClick={() => setModalArtwork(artwork)}
+                style={{ cursor: 'pointer' }}
               />
             </div>
             
@@ -258,6 +261,30 @@ const ArtworksPage = () => {
       <div id="chatbot-section">
         <Chatbot artworkContext={selectedArtwork} />
       </div>
+
+      {/* Modal */}
+      {modalArtwork && (
+        <div className="artwork-modal-overlay" onClick={() => setModalArtwork(null)}>
+          <div className="artwork-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="modal-close-btn"
+              onClick={() => setModalArtwork(null)}
+            >
+              ×
+            </button>
+            <img 
+              src={modalArtwork.image} 
+              alt={modalArtwork.name}
+              className="modal-artwork-image"
+            />
+            <div className="modal-artwork-info">
+              <h3>{modalArtwork.name}</h3>
+              <p>{modalArtwork.size}</p>
+              <p>{modalArtwork.technique}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

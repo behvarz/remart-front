@@ -34,6 +34,9 @@ const Navbar = () => {
       case 'artworks':
         navigate('/eserler');
         break;
+      case 'events':
+        navigate('/etkinlikler');
+        break;
       case 'contact':
         navigate('/iletisim');
         break;

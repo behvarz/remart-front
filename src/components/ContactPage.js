@@ -24,21 +24,7 @@ const ContactPage = () => {
     };
   }, []);
 
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/905558351940', '_blank');
-  };
-
-  const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/iremkose', '_blank');
-  };
-
-  const handleTikTokClick = () => {
-    window.open('https://www.tiktok.com/@iremkose', '_blank');
-  };
-
-  const handlePinterestClick = () => {
-    window.open('https://www.pinterest.com/iremkose', '_blank');
-  };
+  // Social media handlers removed - using direct links in JSX
 
   return (
     <div className="contact-page">
