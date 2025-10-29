@@ -1,0 +1,556 @@
+.artworks-page {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  color: #2c2c2c;
+}
+
+.artworks-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.artworks-header h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  text-shadow: none;
+}
+
+.artworks-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  font-weight: 300;
+  text-shadow: none;
+}
+
+.artworks-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.artwork-card {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  border: none;
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 700px;
+  padding: 40px 0;
+}
+
+.artwork-card:hover {
+  transform: translateY(-5px);
+}
+
+.artwork-image-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 0;
+}
+
+.artwork-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.artwork-card:hover .artwork-image {
+  transform: scale(1.05);
+}
+
+.artwork-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.artwork-card:hover .artwork-overlay {
+  opacity: 1;
+}
+
+.chatbot-button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.chatbot-button:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.artwork-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.artwork-name {
+  font-size: 1.9rem; /* 2 punto büyütüldü (1.7rem + 0.2rem) */
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.artwork-size {
+  font-size: 1.24rem; /* 2 punto büyütüldü (1.04rem + 0.2rem) */
+  color: #dc2626;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.artwork-technique {
+  font-size: 1.05rem; /* 2 punto büyütüldü (0.85rem + 0.2rem) */
+  color: #888;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.artwork-description {
+  font-size: 1.11rem; /* 2 punto büyütüldü (0.91rem + 0.2rem) */
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
+  font-weight: 300;
+}
+
+.artwork-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.view-details-btn,
+.chatbot-btn {
+  flex: 1;
+  padding: 10.8px 19.2px; /* %20 büyütüldü (9px * 1.2, 16px * 1.2) */
+  border: none;
+  border-radius: 30px;
+  font-size: 0.816rem; /* %20 büyütüldü (0.68rem * 1.2) */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 112.8px; /* %20 büyütüldü (94px * 1.2) */
+}
+
+.view-details-btn {
+  background: transparent;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+
+.view-details-btn:hover {
+  background: #dc2626;
+  color: white;
+}
+
+.chatbot-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.chatbot-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+/* Chatbot Section */
+#chatbot-section {
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+/* Modal Styles */
+.artwork-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.artwork-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.modal-artwork-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-artwork-info {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.modal-artwork-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.modal-artwork-info p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Other Artworks Section */
+.other-artworks-section {
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.other-artworks-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.other-artworks-header h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.other-artworks-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .artworks-page {
+    padding: 100px 15px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artworks-header {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .artworks-header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+  .artworks-header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .artworks-grid {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    justify-items: center;
+  }
+  
+  .artwork-image-container {
+    height: 400px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .artwork-info {
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .artwork-name {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-size,
+  .artwork-technique,
+  .artwork-description {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .view-details-btn,
+  .chatbot-btn {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  #chatbot-section {
+    margin-top: 60px;
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-section {
+    margin-top: 60px;
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-header {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .other-artworks-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .other-artworks-header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Modal responsive */
+  .artwork-modal-overlay {
+    padding: 10px;
+  }
+  
+  .artwork-modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    padding: 15px;
+  }
+  
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  
+  .modal-artwork-image {
+    max-height: 60vh;
+    margin-bottom: 15px;
+  }
+  
+  .modal-artwork-info h3 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-artwork-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .artworks-page {
+    padding: 80px 10px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artworks-header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .artwork-image-container {
+    height: 350px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .artwork-info {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .artwork-name {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description {
+    font-size: 0.98rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-actions {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .view-details-btn,
+  .chatbot-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* Modal responsive - küçük ekranlar */
+  .artwork-modal-content {
+    max-width: 98vw;
+    max-height: 98vh;
+    padding: 10px;
+  }
+  
+  .modal-close-btn {
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  
+  .modal-artwork-image {
+    max-height: 50vh;
+    margin-bottom: 10px;
+  }
+  
+  .modal-artwork-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-artwork-info p {
+    font-size: 0.85rem;
+  }
+}

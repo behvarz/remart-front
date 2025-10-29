@@ -1,0 +1,54 @@
+/* ===== FOOTER ===== */
+footer {
+  background: transparent;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+footer h3 {
+  font-family: var(--font-clash-display);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+footer p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer .social {
+  margin-top: 16px;
+}
+
+footer .social a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+footer .social a:hover {
+  color: #8b0e1a;
+}
+
+footer .social a svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+footer .social a:hover svg {
+  transform: scale(1.1);
+}
+
+
+
+
+

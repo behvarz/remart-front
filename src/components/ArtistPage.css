@@ -1,0 +1,428 @@
+.artist-page {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  color: #2c2c2c;
+}
+
+.artist-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.artist-image-section {
+  position: relative;
+  transform: scale(1.5) translateY(-50px);
+  transform-origin: top center;
+}
+
+.artist-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.artist-image:hover {
+  transform: scale(1.02);
+}
+
+.artist-info-section {
+  padding: 20px 0;
+}
+
+.artist-name {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+  line-height: 1.2;
+}
+
+.artist-title {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.artist-description {
+  margin-bottom: 40px;
+}
+
+.artist-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.artist-stats-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px 60px 20px;
+  text-align: center;
+}
+
+.artist-stats {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 300;
+}
+
+.artist-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatbot-button,
+.whatsapp-button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 150px;
+}
+
+.chatbot-button {
+  background: #dc2626;
+  color: white;
+}
+
+.chatbot-button:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+.whatsapp-button {
+  background: white;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+
+.whatsapp-button:hover {
+  background: #dc2626;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+.artist-philosophy {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.artist-philosophy h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+  color: #dc2626;
+}
+
+.philosophy-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.philosophy-item {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-item h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #dc2626;
+}
+
+.philosophy-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 300;
+}
+
+.artist-techniques {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artist-techniques h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #dc2626;
+}
+
+.techniques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.technique-item {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.technique-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.technique-item h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #dc2626;
+}
+
+.technique-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Chatbot Modal */
+.chatbot-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(220, 38, 38, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.chatbot-modal-content {
+  background: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.chatbot-header {
+  background: #dc2626;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.close-chatbot {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.close-chatbot:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-container {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .artist-hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .artist-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .artist-page {
+    padding: 100px 15px 60px;
+    text-align: center;
+  }
+  
+  .artist-hero {
+    text-align: center;
+  }
+  
+  .artist-info-section {
+    text-align: center;
+  }
+  
+  .artist-name {
+    font-size: 2rem;
+  }
+  
+  .artist-title {
+    font-size: 1.2rem;
+  }
+  
+  .artist-description {
+    text-align: center;
+  }
+  
+  .artist-stats {
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  .artist-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .chatbot-button,
+  .whatsapp-button {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .artist-philosophy {
+    text-align: center;
+  }
+  
+  .artist-philosophy h2,
+  .artist-techniques h2 {
+    font-size: 2rem;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .philosophy-item {
+    text-align: center;
+  }
+  
+  .techniques-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .technique-item {
+    text-align: center;
+  }
+  
+  .chatbot-modal-content {
+    margin: 10px;
+    max-height: 90vh;
+  }
+  
+  .chatbot-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-page {
+    padding: 80px 10px 40px;
+  }
+  
+  .artist-name {
+    font-size: 1.8rem;
+  }
+  
+  .artist-description p {
+    font-size: 1rem;
+  }
+  
+  .artist-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .philosophy-item,
+  .technique-item {
+    padding: 20px;
+  }
+  
+  .artist-philosophy h2,
+  .artist-techniques h2 {
+    font-size: 1.8rem;
+  }
+}
