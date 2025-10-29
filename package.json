@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Remart - İrem Eyüpoğlu Sanat Portalı React Frontend",
   "private": true,
+
+  "engines": {
+    "node": "22.x"
+  },
+
   "dependencies": {
     "axios": "^1.6.0",
     "framer-motion": "^10.16.0",
@@ -13,31 +18,26 @@
     "react-scripts": "5.0.1",
     "serve": "^14.2.0"
   },
+
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "node node_modules/react-scripts/bin/react-scripts.js build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy:vercel": "vercel --prod",
-    "deploy:netlify": "npm run build && netlify deploy --prod --dir=build"
+    "eject": "react-scripts eject"
   },
+
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
+
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
+
   "proxy": "http://localhost:3001"
 }

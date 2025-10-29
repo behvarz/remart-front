@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import './EventsPage.css';
@@ -29,7 +29,7 @@ const EventsPage = () => {
     };
   }, []);
 
-  const events = [
+  const events = useMemo(() => [
     {
       id: 1,
       title: "Renklerin Sesi - Kişisel Sergi",
@@ -108,7 +108,7 @@ const EventsPage = () => {
       capacity: "12 kişi",
       status: "upcoming"
     }
-  ];
+  ], []);
 
   useEffect(() => {
     if (selectedCategory === 'all') {

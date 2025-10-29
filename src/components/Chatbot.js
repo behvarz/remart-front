@@ -193,8 +193,7 @@ const Chatbot = ({ artworkContext = null }) => {
         viewport={{ once: true }}
       >
         <div className="chatbot-header">
-          <h3>İrem Köse</h3>
-          <p>Sanatçı</p>
+          <h3>İrem ile konuş</h3>
         </div>
         
         <div className="chatbot-messages">

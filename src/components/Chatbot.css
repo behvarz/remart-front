@@ -47,6 +47,10 @@
   background: rgba(255, 255, 255, 0.4);
   padding: 20px 24px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
@@ -147,6 +151,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   font-weight: 400;
   white-space: pre-line;
+  text-align: left;
 }
 
 /* Eser adları için bold stil */
@@ -293,6 +298,71 @@
   
   .chatbot-input-area {
     padding: 12px 16px;
+  }
+}
+
+/* Daha dar mobil ekranlar için metin ve yatay padding iyileştirmeleri */
+@media (max-width: 480px) {
+  .chatbot-section {
+    padding: 0 10px;
+  }
+
+  .chatbot-header {
+    padding: 14px 16px;
+  }
+
+  .chatbot-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .chatbot-header p {
+    font-size: 0.8rem;
+  }
+
+  .chatbot-messages {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .message {
+    max-width: 100%;
+    gap: 0;
+  }
+
+  .message-avatar {
+    display: none;
+  }
+
+  .message.bot .message-content {
+    margin-right: auto;
+  }
+
+  .message.user .message-content {
+    margin-left: auto;
+  }
+
+  .message-content {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 10px 12px;
+  }
+
+  .artwork-name {
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-link {
+    font-size: 0.9rem;
+  }
+
+  .chatbot-input-area {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .chatbot-input {
+    padding: 10px 14px;
+    font-size: 0.9rem;
   }
 }
 
