@@ -1,0 +1,590 @@
+.artwork-detail-page {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  color: #2c2c2c;
+}
+
+.artwork-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artwork-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: start;
+}
+
+.artwork-image-section {
+  position: relative;
+}
+
+.artwork-detail-image {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.artwork-detail-image:hover {
+  transform: scale(1.02);
+}
+
+.artwork-info-section {
+  padding: 20px 0;
+}
+
+.artwork-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #2c2c2c;
+  line-height: 1.2;
+}
+
+.artwork-specs {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #2c2c2c;
+  font-size: 0.95rem;
+}
+
+.spec-value {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: right;
+  max-width: 60%;
+  line-height: 1.4;
+}
+
+.artwork-description,
+.artwork-story {
+  margin-bottom: 30px;
+}
+
+.artwork-description h3,
+.artwork-story h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+}
+
+.artwork-description p,
+.artwork-story p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 300;
+}
+
+.artwork-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.chatbot-button,
+.whatsapp-button {
+  flex: 1;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.chatbot-button {
+  background: #25D366;
+  color: white;
+}
+
+.chatbot-button:hover {
+  background: #128C7E;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-button {
+  background: #dc2626;
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+.other-artworks {
+  margin-top: 60px;
+}
+
+.other-artworks h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c2c2c;
+}
+
+.other-artworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.other-artwork-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.other-artwork-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.other-artwork-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+.other-artwork-item:hover .other-artwork-image {
+  transform: scale(1.05);
+}
+
+.other-artwork-item h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 15px 0 5px;
+  padding: 0 15px;
+  color: #2c2c2c;
+}
+
+.other-artwork-item p {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 15px 15px;
+  margin: 0;
+}
+
+.artwork-not-found {
+  text-align: center;
+  padding: 100px 20px;
+  color: #2c2c2c;
+}
+
+.artwork-not-found h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.artwork-not-found p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Chatbot Section */
+#chatbot-section {
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+/* Other Artworks Section */
+.other-artworks-section {
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+.other-artworks-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.other-artworks-header h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.other-artworks-header p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  font-weight: 300;
+}
+
+.other-artworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.other-artwork-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.other-artwork-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.other-artwork-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.other-artwork-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.other-artwork-item:hover .other-artwork-image {
+  transform: scale(1.05);
+}
+
+.other-artwork-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.other-artwork-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+}
+
+.other-artwork-info p {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .artwork-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .artwork-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .artwork-detail-page {
+    padding: 100px 15px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-detail-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-main {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .artwork-info-section {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-title {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-specs {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .spec-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .spec-label {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .spec-value {
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description,
+  .artwork-story {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .artwork-description h3,
+  .artwork-story h3 {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description p,
+  .artwork-story p {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-actions {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .chatbot-button,
+  .whatsapp-button {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .other-artworks {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .other-artworks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .other-artwork-image {
+    height: 150px;
+  }
+  
+  .chatbot-modal-content {
+    margin: 10px;
+    max-height: 90vh;
+  }
+  
+  .chatbot-container {
+    height: 350px;
+  }
+  
+  #chatbot-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-header {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .other-artworks-header h2 {
+    text-align: center;
+  }
+  
+  .other-artworks-header p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .artwork-detail-page {
+    padding: 80px 10px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-detail-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .artwork-title {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-specs {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .artwork-description h3,
+  .artwork-story h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-description p,
+  .artwork-story p {
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .artwork-actions {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .chatbot-button,
+  .whatsapp-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .other-artworks-section {
+    margin-top: 60px;
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .other-artworks-header {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .other-artworks-header h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .other-artworks-header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .other-artworks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .other-artwork-image-container {
+    height: 200px;
+  }
+  
+  .other-artwork-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .other-artwork-info h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .other-artwork-info p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
