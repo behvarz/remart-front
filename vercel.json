@@ -25,5 +25,6 @@
   "env": {
     "REACT_APP_API_URL": "https://remart-back.onrender.com",
     "CI": "false"
-  }
+  },
+  "outputDirectory": "frontend/build"
 }
