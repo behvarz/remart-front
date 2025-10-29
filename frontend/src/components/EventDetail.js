@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './EventDetail.css';
@@ -31,7 +31,7 @@ const EventDetail = () => {
   }, []);
 
   // Etkinlik verilerimi burada tekrar tanımlıyorum (gerçek uygulamada API'den gelecek)
-  const events = [
+  const events = useMemo(() => [
     {
       id: 1,
       title: "Renklerin Sesi - Kişisel Sergi",
@@ -186,7 +186,7 @@ const EventDetail = () => {
       parking: "Ücretsiz otopark mevcut",
       accessibility: "Tekerlekli sandalye erişimi mevcut"
     }
-  ];
+  ], []);
 
   useEffect(() => {
     const foundEvent = events.find(e => e.id === parseInt(id));
