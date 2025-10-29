@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/build"
+        "distDir": "build"
       }
     }
   ],
@@ -26,5 +26,5 @@
     "REACT_APP_API_URL": "https://remart-back.onrender.com",
     "CI": "false"
   },
-  "outputDirectory": "frontend/build"
+  "outputDirectory": "build"
 }
