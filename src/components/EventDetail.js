@@ -7,6 +7,7 @@ const EventDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [event, setEvent] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
   const [isRegistering, setIsRegistering] = useState(false);
 
   useEffect(() => {
@@ -325,13 +326,22 @@ const EventDetail = () => {
             </div>
             <div className="gallery-grid">
               {event.images.map((imgSrc, idx) => (
-                <div key={idx} className="gallery-thumb">
+                <div key={idx} className="gallery-thumb" onClick={() => setPreviewImage(imgSrc)}>
                   <img src={imgSrc} alt={`${event.title} - ${idx + 1}`} />
                 </div>
               ))}
             </div>
           </div>
         </section>
+      )}
+
+      {previewImage && (
+        <div className="lightbox-overlay" onClick={() => setPreviewImage(null)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={() => setPreviewImage(null)}>×</button>
+            <img className="lightbox-image" src={previewImage} alt="Önizleme" />
+          </div>
+        </div>
       )}
     </div>
   );
