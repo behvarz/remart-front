@@ -122,7 +122,7 @@ const ArtworksPage = () => {
     {
       id: 9,
       name: "SONSUZ BAŞLANGIÇ",
-      size: "24 × 45 cm",
+      size: "30 × 42 cm",
       technique: "300 gr Canvas Dokulu Kağıt / Yağlı Boya",
       price: "Satış için WhatsApp: +90 555 835 19 40",
       description: "Antik Mısır mitolojisinde doğumun, yeniden doğuşun ve sonsuz döngünün sembolü olan Skarabe Tanrısı Khepri'den ilham alır. Eserde, karanlığın içinden doğan ışık, her sabah yeniden yükselen güneşi ve yaşamın sürekli dönüşümünü temsil eder.",

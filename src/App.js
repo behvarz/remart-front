@@ -56,8 +56,10 @@ function App() {
       <div className="mobile-hero">
         <AutoGallery />
         <div className="mobile-quote">
-          <p>"Her renk, bir duygunun yankısıdır."</p>
-          <span>İrem KÖSE</span>
+          <p>“Benim için sanat, görüleni değil hissedileni anlatmaktır.</p>
+          <p>Tuval, kalbimin sessizce nefes aldığı yerdir.</p>
+          <p>Orada kelimeler susar, sadece iç sesimin rengi kalır.”</p>
+          <span>İrem Köse</span>
         </div>
       </div>
       <div className="desktop-intro">

@@ -11,7 +11,7 @@ const Chatbot = ({ artworkContext = null }) => {
     if (artworkContext) {
       return `Merhaba! Ben İrem Köse'nin dijital temsilcisiyim. Şu anda "${artworkContext.name}" eseri hakkında konuşuyoruz. Bu eserle ilgili ne öğrenmek istersiniz?`;
     }
-    return "Merhaba! Ben İrem Köse'nin dijital temsilcisiyim. Her renk, bir duygunun yankısıdır... Sizinle sanat dünyamı paylaşmaktan mutluluk duyarım. Ne öğrenmek istersiniz?";
+    return "Merhaba! Ben İrem Köse'nin dijital temsilcisiyim. Benim için sanat, görüleni değil hissedileni anlatmaktır. Ne öğrenmek istersiniz?";
   };
 
   const [messages, setMessages] = useState([

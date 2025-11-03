@@ -17,9 +17,10 @@ const ArtistIntro = () => {
         transition={{ delay: 0.2, duration: 0.6 }}
         viewport={{ once: true }}
       >
-        "Her renk, bir duygunun yankısıdır.<br />
-        Tuval, sadece bir yüzey değil; bazen sessiz bir aynadır.<br />
-        Benim için resim yapmak; kelimelerle değil, fırçayla dua etmektir."
+        “Benim için sanat, görüleni değil hissedileni anlatmaktır.<br />
+        <br />
+        Tuval, kalbimin sessizce nefes aldığı yerdir.<br />
+        Orada kelimeler susar, sadece iç sesimin rengi kalır.”
       </motion.p>
       <motion.span
         initial={{ opacity: 0, x: -20 }}
