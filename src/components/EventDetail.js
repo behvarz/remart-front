@@ -41,6 +41,13 @@ const EventDetail = () => {
       location: "Reya Akademi",
       description: "Canvas dokulu kağıt üzerinde akrilik tekniklerine giriş. Uygulamalı üretim atölyesi.",
       image: "/workshops/workshop-1.jpeg",
+      images: [
+        "/workshops/workshop-1.jpeg",
+        "/workshops/workshop-1-1.jpeg",
+        "/workshops/workshop1-2.jpeg",
+        "/workshops/workshop-1-3.jpeg",
+        "/workshops/workshop-1-4.jpeg"
+      ],
       price: "Bilgi için iletişime geçin",
       capacity: "Sınırlı kontenjan",
       status: "upcoming",
@@ -56,6 +63,13 @@ const EventDetail = () => {
       location: "Reya Akademi",
       description: "Ahşap yüzeylerde akrilik uygulamaları ve doku çalışmaları.",
       image: "/workshops/workshop-2.jpeg",
+      images: [
+        "/workshops/workshop-2.jpeg",
+        "/workshops/workshop-2-1.jpeg",
+        "/workshops/workshop2-2.jpeg",
+        "/workshops/workshop-2-3.jpeg",
+        "/workshops/workshop-2-4.jpeg"
+      ],
       price: "Bilgi için iletişime geçin",
       capacity: "Sınırlı kontenjan",
       status: "upcoming",
@@ -301,6 +315,24 @@ const EventDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Event Gallery */}
+      {event.images && event.images.length > 1 && (
+        <section className="event-gallery">
+          <div className="container">
+            <div className="gallery-header">
+              <h3>Etkinlikten Kareler</h3>
+            </div>
+            <div className="gallery-grid">
+              {event.images.map((imgSrc, idx) => (
+                <div key={idx} className="gallery-thumb">
+                  <img src={imgSrc} alt={`${event.title} - ${idx + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 };
