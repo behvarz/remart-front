@@ -36,7 +36,7 @@ const BlogPage = () => {
       date: "15 Ekim 2024",
       category: "Sanat Teorisi",
       readTime: "5 dk",
-      image: "/eserler/01.jpg"
+      image: "/blog/Renklerin-Duygusal-Dili.jpg"
     },
     {
       id: 2,
@@ -46,7 +46,7 @@ const BlogPage = () => {
       date: "8 Ekim 2024",
       category: "Sanat Süreci",
       readTime: "4 dk",
-      image: "/eserler/02.jpg"
+      image: "/blog/tuval-üzerinde-duygular.jpg"
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const BlogPage = () => {
       date: "1 Ekim 2024",
       category: "Teknik",
       readTime: "6 dk",
-      image: "/eserler/03.jpg"
+      image: "/blog/katmanlı-yüzeyler.jpg"
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const BlogPage = () => {
       date: "24 Eylül 2024",
       category: "Sosyal Sanat",
       readTime: "7 dk",
-      image: "/eserler/04.jpg"
+      image: "/blog/kadın-figürü-ve-güç.jpg"
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const BlogPage = () => {
       date: "17 Eylül 2024",
       category: "Çevre Sanatı",
       readTime: "5 dk",
-      image: "/eserler/05.jpg"
+      image: "/blog/doğa-ve-insan.jpg"
     }
   ];
 

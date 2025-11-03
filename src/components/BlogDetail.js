@@ -53,7 +53,7 @@ Bu nedenle, her sanat eseri, kendine özgü bir renk dili konuşur ve izleyicini
       date: "15 Ekim 2024",
       category: "Sanat Teorisi",
       readTime: "5 dk",
-      image: "/eserler/01.jpg",
+      image: "/blog/Renklerin-Duygusal-Dili.jpg",
       author: "İrem Köse"
     },
     2: {
@@ -80,7 +80,7 @@ Bu yaklaşım, sanat eserine samimiyet ve özgünlük katar. İzleyici, eserde s
       date: "8 Ekim 2024",
       category: "Sanat Süreci",
       readTime: "4 dk",
-      image: "/eserler/02.jpg",
+      image: "/blog/tuval-üzerinde-duygular.jpg",
       author: "İrem Köse"
     },
     3: {
@@ -107,7 +107,7 @@ Bu yaklaşım, sadece görsel değil, aynı zamanda dokunsal bir deneyim de suna
       date: "1 Ekim 2024",
       category: "Teknik",
       readTime: "6 dk",
-      image: "/eserler/03.jpg",
+      image: "/blog/katmanlı-yüzeyler.jpg",
       author: "İrem Köse"
     },
     4: {
@@ -134,7 +134,7 @@ Bu semboller, kadının doğal gücünü ve yaratıcılığını vurgular. Her s
       date: "24 Eylül 2024",
       category: "Sosyal Sanat",
       readTime: "7 dk",
-      image: "/eserler/04.jpg",
+      image: "/blog/kadın-figürü-ve-güç.jpg",
       author: "İrem Köse"
     },
     5: {
@@ -161,7 +161,7 @@ Bu mesaj, izleyicinin günlük yaşamında da yankı bulur. Sanat, sürdürüleb
       date: "17 Eylül 2024",
       category: "Çevre Sanatı",
       readTime: "5 dk",
-      image: "/eserler/05.jpg",
+      image: "/blog/doğa-ve-insan.jpg",
       author: "İrem Köse"
     }
   };
