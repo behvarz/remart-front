@@ -19,6 +19,14 @@
       "dest": "/assets/$1"
     },
     {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    },
+    {
+      "src": "/workshops/(.*)",
+      "dest": "/workshops/$1"
+    },
+    {
       "src": "/eserler/(.*)",
       "dest": "/eserler/$1"
     },
