@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Chatbot.css';
 
 // API URL configuration
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+const API_URL = process.env.REACT_APP_API_URL || 'https://remart-backend-production.up.railway.app';
 
 const Chatbot = ({ artworkContext = null }) => {
   const getInitialMessage = () => {
